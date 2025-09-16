@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: hf-to-twitch
+    env: docker
+    autoDeploy: true
+    plan: starter  # free for limited hours, paid for 24/7
+    envVars:
+      - key: TWITCH_KEY
+        sync: false   # set in dashboard, secret
